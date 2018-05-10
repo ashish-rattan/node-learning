@@ -36,16 +36,29 @@ var getAll = () => {
 }
 
 var getNote = (title) => {
-
+	var notes = fetchNotes();
+	var returnNote = notes.filter((node) => node.title === title);
+	return returnNote[0];
 };
 
 var removeNote = (title) => {
+	var notes = fetchNotes();
+	var notesToKeep = notes.filter((note) => title !== note.title);
+	saveNotes(notesToKeep);
+	
+	return notes.length !== notesToKeep.length;
+}
 
+var logNote = (note) => {
+	console.log("----");
+	console.log(`Title: ${note.title}`);
+	console.log(`Body: ${note.body}`);
 }
 
 module.exports = {
     addNote,
     getAll,
     getNote,
-    removeNote
+    removeNote,
+	logNote
 }
