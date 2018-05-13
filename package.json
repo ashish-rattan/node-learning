@@ -2,14 +2,22 @@
   "name": "nodelearning",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ashish Rattan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashish-rattan/node-learning.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashish-rattan/node-learning/issues"
+  },
+  "homepage": "https://github.com/ashish-rattan/node-learning#readme",
   "dependencies": {
-    "lodash": "^4.17.5",
-    "yargs": "^4.7.1"
+    "express": "^4.14.0",
+    "hbs": "^4.0.0"
   }
 }
